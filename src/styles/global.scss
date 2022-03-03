@@ -1,0 +1,22 @@
+@use './base' as b;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: b.$font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: b.$darkBlue;
+}
+
+h1 {
+  font-family: b.$font-family;
+}
