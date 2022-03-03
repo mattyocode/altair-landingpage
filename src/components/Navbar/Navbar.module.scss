@@ -34,29 +34,23 @@
   margin: auto 0;
 }
 
-.underline {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  border-bottom: 2px transparent b.$blue;
-
-  &:hover {
-    border-bottom: 2px solid b.$blue;
-    animation: border_anim 3s linear forwards;
-  }
-}
+// .linkWrapper {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   height: 100%;
+// }
 
 .link {
   text-align: center;
 }
 
-// @keyframes border_anim {
-//   0% {
-//     width: 0%;
-//   }
-//   100% {
-//     width: 100%;
-//   }
+// .underline {
+//   position: absolute;
+//   bottom: 0;
+//   height: 2px;
+//   width: 100%;
+//   background-color: b.$blue;
 // }
 
 .menu {

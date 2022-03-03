@@ -1,0 +1,17 @@
+@use '../../styles/base' as b;
+
+.linkWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: b.$blue;
+}

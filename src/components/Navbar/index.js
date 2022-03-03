@@ -3,6 +3,7 @@ import logo from '../../assets/images/logos/alternative-airlines.jpg';
 import burger from '../../assets/icons/menu.svg';
 import useWindowSize from '../../hooks/use-window-size';
 import * as BREAKPOINTS from '../../constants/breakpoints';
+import Underline from '../Underline';
 
 import styles from './Navbar.module.scss';
 
@@ -27,11 +28,11 @@ export default function Navbar({ linksData = [], ...restProps }) {
           alt='Alternative Airlines logo'
         />
         {showFullMenu ? (
-          <div className={styles.underline}>
+          <Underline>
             <a className={styles.link} href={linksData.href}>
               <p className={styles.textLink}>Manage Booking</p>
             </a>
-          </div>
+          </Underline>
         ) : (
           <img className={styles.menu} src={burger} alt='Toggle menu' />
         )}
