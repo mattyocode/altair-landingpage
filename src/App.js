@@ -1,11 +1,12 @@
 import Navbar from './components/Navbar';
+import navData from './fixtures/navData.json';
 
 import './styles/global.scss';
 
 function App() {
   return (
     <div className='App'>
-      <Navbar />
+      <Navbar navData={navData} />
       <h1>Hello World</h1>
     </div>
   );

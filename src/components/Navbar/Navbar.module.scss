@@ -2,15 +2,22 @@
 
 .wrapper {
   width: 100%;
-  height: 97px;
+  height: 6rem;
   background-color: b.$white;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: b.$breakpoint-tablet) {
+    height: 6.5rem;
+  }
+  @media (min-width: b.$breakpoint-desktop) {
+    height: 5.5rem;
+  }
 }
 
 .nav {
-  padding: 0 2rem;
+  margin: 0 2rem;
   width: 100%;
   height: 100%;
   max-width: 1120px;
@@ -19,39 +26,40 @@
   justify-content: space-between;
 
   @media (min-width: b.$breakpoint-tablet) {
-    padding: 0 3rem;
+    margin: 0 3rem;
   }
 }
 
 .logo {
   height: 32px;
+
+  @media (min-width: b.$breakpoint-desktop) {
+    height: 40px;
+  }
 }
 
-.textLink {
-  font-size: 1rem;
-  vertical-align: middle;
-  color: b.$darkGrey;
-  margin: auto 0;
+.navItem {
+  list-style-type: none;
+  cursor: pointer;
 }
 
-// .linkWrapper {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   height: 100%;
-// }
+.centerLinks {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding-left: 1.8rem;
 
-.link {
-  text-align: center;
+  & > * {
+    margin: 0 0.6rem;
+  }
 }
 
-// .underline {
-//   position: absolute;
-//   bottom: 0;
-//   height: 2px;
-//   width: 100%;
-//   background-color: b.$blue;
-// }
+.linkWrapper {
+  position: relative;
+  display: flex;
+  height: 100%;
+  min-width: fit-content;
+}
 
 .menu {
   height: 32px;

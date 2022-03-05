@@ -1,0 +1,12 @@
+@use '../../styles/base' as b;
+
+.textLink {
+  font-size: 14px;
+  vertical-align: middle;
+  color: b.$darkGrey;
+  margin: auto 0;
+}
+
+.link {
+  text-align: center;
+}
