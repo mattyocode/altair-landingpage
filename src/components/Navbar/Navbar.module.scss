@@ -8,9 +8,9 @@
   align-items: center;
   justify-content: center;
 
-  @media (min-width: b.$breakpoint-tablet) {
-    height: 6.5rem;
-  }
+  // @media (min-width: b.$breakpoint-tablet) {
+  //   height: 6.5rem;
+  // }
   @media (min-width: b.$breakpoint-desktop) {
     height: 5.5rem;
   }

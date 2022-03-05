@@ -1,0 +1,10 @@
+@use '../../styles/base' as b;
+
+.wrapper {
+  background-color: b.$white;
+  width: 314px;
+  height: 465px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+}
