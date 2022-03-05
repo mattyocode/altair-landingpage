@@ -1,0 +1,31 @@
+@use '../../styles/base' as b;
+
+.wrapper {
+  margin: 2rem;
+}
+
+.icon {
+  max-width: 110px;
+}
+
+.label {
+  font-size: 14px;
+
+  & > * {
+    display: inline;
+    padding: 0 10px;
+  }
+}
+
+.bolder {
+  font-weight: 500;
+}
+
+.divider {
+  padding: 0;
+  height: 5px;
+  width: 2px;
+  // background-color: b.$darkGrey;
+  border-right: 1px solid b.$darkGrey;
+  opacity: 0.3;
+}

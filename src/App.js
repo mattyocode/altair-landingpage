@@ -1,4 +1,5 @@
-import Navbar from './components/Navbar';
+import { Navbar } from './components';
+import HeroBlock from './containers/hero';
 import navData from './fixtures/navData.json';
 
 import './styles/global.scss';
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className='App'>
       <Navbar navData={navData} />
-      <h1>Hello World</h1>
+      <HeroBlock />
     </div>
   );
 }
