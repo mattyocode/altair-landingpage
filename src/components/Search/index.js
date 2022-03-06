@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import SearchBtns from './SearchBtn';
+import RadioBtns from './RadioBtns';
 import SearchField from './SearchField';
+import CTABtn from './CTABtn';
+import Toggle from './Toggle';
 
 import styles from './Search.module.scss';
 
@@ -22,20 +24,58 @@ const flightOptions = [
   },
 ];
 
-export default function Search() {
+const testFieldData = [
+  {
+    key: 1,
+    header: 'Where from?',
+    defaultValue: 'London (LON)',
+    options: [],
+  },
+  {
+    key: 2,
+    header: 'Where to?',
+    defaultValue: 'SYDNEY (SYD)',
+    options: [],
+  },
+  {
+    key: 3,
+    header: 'Dates',
+    furtherDetail: '14 Nights',
+    defaultValue: 'Sat 11 Jan - Sat 25 Jun',
+    options: [],
+  },
+  {
+    key: 4,
+    header: 'Passengers',
+    defaultValue: '2 Adults, Any class',
+    options: [],
+  },
+];
+
+export default function Search({ fieldData = testFieldData }) {
   const [flightType, setFlightType] = useState(flightOptions[0].value);
   return (
     <form className={styles.wrapper}>
-      <div className={styles.choiceBtns}>
-        <SearchBtns
+      <div className={styles.topRow}>
+        <RadioBtns
           optionsData={flightOptions}
           selected={flightType}
           setSelected={setFlightType}
         />
+        <Toggle label='Direct flights only' />
       </div>
       <div className={styles.choiceField}>
-        <SearchField fieldName={'Where from?'} value={'London (LON)'} />
+        {fieldData.map((field) => {
+          return (
+            <SearchField
+              fieldName={field.header}
+              value={field.defaultValue}
+              furtherDetail={field.furtherDetail}
+            />
+          );
+        })}
       </div>
+      <CTABtn label={'Search flights'} />
     </form>
   );
 }

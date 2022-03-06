@@ -1,8 +1,8 @@
 import React from 'react';
 
-import styles from './SearchBtns.module.scss';
+import styles from './RadioBtns.module.scss';
 
-export default function SearchBtns({
+export default function RadioBtns({
   optionsData,
   selected,
   setSelected,
