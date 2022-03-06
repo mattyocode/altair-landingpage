@@ -8,35 +8,79 @@
   width: b.$content-width-mobile;
   border-radius: 15px;
   padding: 22px;
-  // height: 210px;
   margin: 8px auto;
   overflow: hidden;
+
+  @media screen and (min-width: b.$breakpoint-tablet) {
+    width: b.$content-width-tablet;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
 }
 
 .cardContent {
   text-align: center;
+  @media screen and (min-width: b.$breakpoint-tablet) {
+    width: 550px;
+
+    & > * {
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.largeContent {
+  width: 280px;
 }
 
 .heading {
-  // font-size: 18px;
-  // font-weight: 400;
-  // margin: 10px;
+  @media screen and (min-width: b.$breakpoint-tablet) {
+    margin-left: 0;
+  }
 }
 
 .description {
-  // color: b.$darkGrey;
-  // text-align: center;
-  // font-size: 14px;
-  // margin: 5px;
+  max-width: 300px;
+  @media screen and (min-width: b.$breakpoint-tablet) {
+    margin-left: 0;
+    max-width: none;
+  }
+}
+
+.bulletList {
+  list-style-type: none;
+  margin: 30px 0;
+  padding-left: 0;
+}
+
+.bulletItem {
+  margin: 10px 0;
+  & > * {
+    display: inline;
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+
+.bulletIcon {
+  height: 24px;
+  margin-right: 8px;
 }
 
 .ctaBtn {
   height: 55px;
   width: 238px;
-  margin: 16px;
+  margin: 16px auto;
 
   & > * {
     font-size: 15px;
     font-weight: 500;
+  }
+
+  @media screen and (min-width: b.$breakpoint-tablet) {
+    margin: 30px 0;
   }
 }
