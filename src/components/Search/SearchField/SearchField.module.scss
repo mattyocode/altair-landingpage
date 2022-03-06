@@ -1,8 +1,37 @@
-@use '../../styles/base' as b;
+@use '../../../styles/base' as b;
 
-.wrapper {
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 74px;
+  width: 100%;
   background-color: b.$white;
-  width: 314px;
-  height: 465px;
-  border-radius: b.$border-radius;
+  border: 1px solid b.$outlineGrey;
+  border-radius: 7px;
+  margin: auto 2px;
+  color: b.$darkGrey;
+  cursor: pointer;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.fieldName {
+  // font-size: 10px;
+  font-size: 0.65rem;
+  margin: 0;
+}
+
+.value {
+  color: b.$darkBlue;
+  font-size: 0.9rem;
+  margin: 2px 0 0 0;
+  font-weight: 400;
 }

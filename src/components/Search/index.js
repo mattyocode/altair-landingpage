@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchBtns from './SearchBtn';
+import SearchField from './SearchField';
 
 import styles from './Search.module.scss';
 
@@ -31,6 +32,9 @@ export default function Search() {
           selected={flightType}
           setSelected={setFlightType}
         />
+      </div>
+      <div className={styles.choiceField}>
+        <SearchField fieldName={'Where from?'} value={'London (LON)'} />
       </div>
     </form>
   );

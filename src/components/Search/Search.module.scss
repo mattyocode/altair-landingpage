@@ -5,6 +5,16 @@
   width: 314px;
   height: 465px;
   border-radius: 15px;
+  padding: 1rem;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.choiceBtns {
+  // height: 44px;
+}
+
+.choiceField {
+  width: 100%;
 }
