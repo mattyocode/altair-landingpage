@@ -34,7 +34,7 @@ const testFieldData = [
   {
     key: 2,
     header: 'Where to?',
-    defaultValue: 'SYDNEY (SYD)',
+    defaultValue: 'Sydney (SYD)',
     options: [],
   },
   {

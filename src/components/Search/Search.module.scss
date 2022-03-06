@@ -2,7 +2,7 @@
 
 .wrapper {
   background-color: b.$white;
-  width: 315px;
+  width: b.$content-width-mobile;
   border-radius: 15px;
   padding: 1rem;
   display: flex;
@@ -10,10 +10,10 @@
   flex-direction: column;
 
   @media (min-width: b.$breakpoint-tablet) {
-    width: 742px;
+    width: b.$content-width-tablet;
   }
   @media (min-width: b.$breakpoint-desktop) {
-    width: 1120px;
+    width: b.$content-width-desktop;
   }
 }
 

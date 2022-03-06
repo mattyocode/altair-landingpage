@@ -1,0 +1,28 @@
+@use '../../../styles/base' as b;
+@use '../../../styles/mixins' as m;
+
+.card {
+  @include m.flex-centered;
+  flex-direction: column;
+  background-color: b.$white;
+  // width: b.$content-width-mobile;
+  border-radius: 15px;
+  padding: 22px;
+  height: 210px;
+  margin: 8px 0;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  margin: 1rem;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.description {
+  font-size: 14px;
+}

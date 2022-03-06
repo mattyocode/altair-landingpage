@@ -1,0 +1,42 @@
+@use '../../../styles/base' as b;
+@use '../../../styles/mixins' as m;
+
+.card {
+  @include m.flex-centered;
+  flex-direction: column;
+  background-color: b.$white;
+  width: b.$content-width-mobile;
+  border-radius: 15px;
+  padding: 22px;
+  // height: 210px;
+  margin: 8px auto;
+  overflow: hidden;
+}
+
+.cardContent {
+  text-align: center;
+}
+
+.heading {
+  // font-size: 18px;
+  // font-weight: 400;
+  // margin: 10px;
+}
+
+.description {
+  // color: b.$darkGrey;
+  // text-align: center;
+  // font-size: 14px;
+  // margin: 5px;
+}
+
+.ctaBtn {
+  height: 55px;
+  width: 238px;
+  margin: 16px;
+
+  & > * {
+    font-size: 15px;
+    font-weight: 500;
+  }
+}

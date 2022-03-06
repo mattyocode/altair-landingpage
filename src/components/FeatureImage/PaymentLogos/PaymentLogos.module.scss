@@ -1,0 +1,13 @@
+@use '../../../styles/base' as b;
+
+.wrapper {
+  position: relative;
+  display: flex;
+  width: b.$content-width-mobile;
+  height: 90px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}

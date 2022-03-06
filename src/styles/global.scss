@@ -29,6 +29,18 @@ h1 {
   }
 }
 
+h2 {
+  // font-size: 17px;
+  font-size: 20px;
+  // font-weight: 400;
+  font-weight: 500;
+  margin: 10px;
+
+  @media (min-width: b.$breakpoint-tablet) {
+    font-size: 22px;
+  }
+}
+
 h3 {
   font-weight: 400;
   font-size: 16px;
@@ -38,4 +50,11 @@ h3 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+p {
+  color: b.$darkGrey;
+  text-align: center;
+  font-size: 16px;
+  margin: 5px;
 }
