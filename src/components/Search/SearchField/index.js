@@ -5,6 +5,7 @@ import styles from './SearchField.module.scss';
 export default function SearchField({
   fieldName,
   value,
+  setValue,
   furtherDetail = null,
 }) {
   return (

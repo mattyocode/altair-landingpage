@@ -64,18 +64,38 @@ export default function Search({ fieldData = testFieldData }) {
         />
         <Toggle label='Direct flights only' />
       </div>
-      <div className={styles.choiceField}>
-        {fieldData.map((field) => {
-          return (
+      <div className={styles.choiceGroup}>
+        <div className={styles.choiceFields}>
+          <div className={`${styles.choiceRow} ${styles.joined}`}>
             <SearchField
-              fieldName={field.header}
-              value={field.defaultValue}
-              furtherDetail={field.furtherDetail}
+              fieldName={fieldData[0].header}
+              value={fieldData[0].defaultValue}
+              furtherDetail={fieldData[0].furtherDetail}
             />
-          );
-        })}
+            <div className={styles.swap}></div>
+            <SearchField
+              fieldName={fieldData[1].header}
+              value={fieldData[1].defaultValue}
+              furtherDetail={fieldData[1].furtherDetail}
+            />
+          </div>
+          <div className={`${styles.choiceRow} ${styles.inlineSpacing}`}>
+            <SearchField
+              fieldName={fieldData[2].header}
+              value={fieldData[2].defaultValue}
+              furtherDetail={fieldData[2].furtherDetail}
+            />
+            <SearchField
+              fieldName={fieldData[3].header}
+              value={fieldData[3].defaultValue}
+              furtherDetail={fieldData[3].furtherDetail}
+            />
+          </div>
+        </div>
+        <div className={styles.btnWrapper}>
+          <CTABtn label={'Search flights'} />
+        </div>
       </div>
-      <CTABtn label={'Search flights'} />
     </form>
   );
 }
