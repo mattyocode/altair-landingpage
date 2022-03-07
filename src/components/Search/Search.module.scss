@@ -79,7 +79,11 @@
 }
 
 .inlineSpacing {
-  justify-content: space-evenly;
+  justify-content: space-between;
+
+  @media (min-width: b.$breakpoint-desktop) {
+    justify-content: space-evenly;
+  }
 }
 
 .swapBtn {
