@@ -1,4 +1,5 @@
 @use '../../../styles/base' as b;
+@use '../../../styles/mixins' as m;
 
 .options {
   list-style-type: none;
@@ -20,9 +21,7 @@
 }
 
 .option label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include m.flex-centered;
   width: 90px;
   height: 44px;
   background-color: b.$white;

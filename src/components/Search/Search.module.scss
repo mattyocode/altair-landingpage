@@ -1,4 +1,5 @@
 @use '../../styles/base' as b;
+@use '../../styles/mixins' as m;
 
 .wrapper {
   background-color: b.$white;
@@ -83,9 +84,7 @@
 
 .swapBtn {
   @media (min-width: b.$breakpoint-tablet) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-centered;
     margin-top: 10px;
 
     &:after {

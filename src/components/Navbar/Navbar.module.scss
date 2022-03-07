@@ -1,12 +1,11 @@
 @use '../../styles/base' as b;
+@use '../../styles/mixins' as m;
 
 .wrapper {
+  @include m.flex-centered;
   width: 100%;
   height: 6rem;
   background-color: b.$white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   @media (min-width: b.$breakpoint-desktop) {
     height: 5.5rem;
