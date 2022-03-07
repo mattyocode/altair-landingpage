@@ -25,13 +25,15 @@ Page is available at [Alternative Airlines test page](https://mattyocode.github.
 
    Run `yarn start` to launch the app on localhost:3000
 
+## Live site example below
+
 ![alt-air-screengrab.jpg](https://github.com/mattyocode/images/blob/main/altair/alt-air-screengrab.jpg)
 
 ## Notes
 
 Given the nature of the task (building out a prototype), I've focused on the presentational aspects of the process, aiming to closely match the design provided, both in terms of layout and animation.
 
-I've included a few tests for the containers to provide some test oversight, but given more time, I would look to unit test the individual components.
+I've included a few tests for the containers to provide some test oversight, but given more time, I would look to unit test the individual components. With those tests, I'd also implement a CI/CD pipeline to take care of automating running test suites and pushing to deployment (when appropriate).
 
 Some state management is present in components, but as the data is all dummy data and we're not fetching data, there is no overall state management, and form fields, for example, are left without their values being tracked in state. Of course, in production, this would be a key aspect of the page, but I've spent time on the design aspect of the task vs. setting up hypothetical state management for the form.
 
