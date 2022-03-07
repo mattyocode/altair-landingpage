@@ -22,7 +22,6 @@ export default function Underline({ children, ...restProps }) {
 
   useEffect(() => {
     if (isHovered) {
-      console.log('hovered!');
       controls.start('visible');
     } else {
       controls.start('hidden');

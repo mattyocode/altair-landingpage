@@ -11,6 +11,7 @@ Page is available at [Alternative Airlines test page](https://mattyocode.github.
    ```bash
    cd projects
    git clone <repo-tag>
+   cd altair-landingpage
    ```
 
 1. Install dependencies
