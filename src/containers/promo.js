@@ -1,4 +1,4 @@
-import { LargePromo, PaymentLogos } from '../components';
+import { LargePromo, PaymentLogos, PhoneWithLogos } from '../components';
 
 import klarna from '../assets/images/logos/klarna.png';
 import afterpay from '../assets/images/logos/afterpay.png';
@@ -43,33 +43,31 @@ const logos = [
 
 const logoPositions = [
   {
-    top: 20,
-    left: -10,
+    top: 200,
+    left: 20,
     transform: 'scale(1.1)',
   },
   {
-    top: 35,
-    left: 100,
-    transform: 'scale(1)',
+    top: -40,
+    left: 80,
+    transform: 'scale(1.1)',
   },
   {
-    top: 0,
-    left: 200,
+    top: -80,
+    left: 210,
     transform: 'scale(0.9)',
   },
   {
-    top: 40,
-    left: 280,
+    top: 60,
+    left: 250,
     transform: 'scale(1.1)',
   },
 ];
 
-const mobileContent = (
-  <PaymentLogos logoData={logos} positionData={logoPositions} />
-);
+const mobileContent = <PaymentLogos logoData={logos} />;
 
 const largeContent = (
-  <PaymentLogos logoData={logos} positionData={logoPositions} />
+  <PhoneWithLogos logoData={logos} positionData={logoPositions} />
 );
 
 export default function PromoContainer() {
@@ -82,6 +80,6 @@ export default function PromoContainer() {
       bulletList={largePromo1.bulletList}
       smallContent={mobileContent}
       largeContent={largeContent}
-    ></LargePromo>
+    />
   );
 }

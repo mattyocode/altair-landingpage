@@ -7,3 +7,4 @@ export { default as Search } from './Search';
 export { default as SmallCardGrid } from './SmallCardGrid';
 export { default as LargePromo } from './Card/LargePromo';
 export { default as PaymentLogos } from './FeatureImage/PaymentLogos';
+export { default as PhoneWithLogos } from './FeatureImage/PhoneWithLogos';
