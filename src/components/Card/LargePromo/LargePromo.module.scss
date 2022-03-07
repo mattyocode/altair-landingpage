@@ -8,14 +8,19 @@
   width: b.$content-width-mobile;
   border-radius: 15px;
   padding: 22px;
-  margin: 8px auto;
+  margin: 10px auto 40px auto;
   overflow: hidden;
 
   @media screen and (min-width: b.$breakpoint-tablet) {
     width: b.$content-width-tablet;
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px;
+    padding: 30px 50px 20px 50px;
+  }
+
+  @media screen and (min-width: b.$breakpoint-desktop) {
+    width: b.$content-width-desktop;
+    padding: 30px 60px 20px 60px;
   }
 }
 
@@ -34,6 +39,9 @@
 
 .largeContent {
   width: 280px;
+  @media screen and (min-width: b.$breakpoint-desktop) {
+    width: 420px;
+  }
 }
 
 .heading {
@@ -46,13 +54,13 @@
   max-width: 300px;
   @media screen and (min-width: b.$breakpoint-tablet) {
     margin-left: 0;
-    max-width: none;
+    max-width: 440px;
   }
 }
 
 .bulletList {
   list-style-type: none;
-  margin: 30px 0;
+  margin: 40px 0;
   padding-left: 0;
 }
 

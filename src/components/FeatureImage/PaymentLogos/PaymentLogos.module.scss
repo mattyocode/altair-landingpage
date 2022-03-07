@@ -5,6 +5,9 @@
   display: flex;
   width: b.$content-width-mobile;
   height: 90px;
+  @media screen and (min-width: b.$breakpoint-desktop) {
+    width: 400px;
+  }
 }
 
 .logo {

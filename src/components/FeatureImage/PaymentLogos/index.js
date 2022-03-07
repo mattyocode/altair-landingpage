@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { isHoveredContext } from '../../Card/LargePromo';
+import useWindowSize from '../../../hooks/use-window-size';
+import * as BREAKPOINTS from '../../../constants/breakpoints';
 
 import styles from './PaymentLogos.module.scss';
 
@@ -25,12 +29,61 @@ const defaultLogoPositions = [
   },
 ];
 
+const logoLeftVariants = {
+  initial: { y: 0, x: 0, scale: 1 },
+  hover: {
+    y: -10,
+    x: -10,
+    scale: 1.1,
+    transition: {
+      delay: 0.05,
+      duration: 0.3,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+const logoRightVariants = {
+  initial: { y: 0, x: 0, scale: 1 },
+  hover: {
+    y: -10,
+    x: 10,
+    scale: 1.1,
+    transition: {
+      delay: 0.05,
+      duration: 0.3,
+      ease: 'easeInOut',
+    },
+  },
+};
+
 export default function PaymentLogos({
   logoData = [],
   positionData = defaultLogoPositions,
   children,
   ...restProps
 }) {
+  const [isDesktop, setIsDesktop] = useState(false);
+  const { isHovered } = useContext(isHoveredContext);
+  const { width } = useWindowSize();
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (width < BREAKPOINTS.DESKTOP) {
+      setIsDesktop(false);
+    } else {
+      setIsDesktop(true);
+    }
+  }, [width]);
+
+  useEffect(() => {
+    if (isHovered && isDesktop) {
+      controls.start('hover');
+    } else {
+      controls.start('initial');
+    }
+  }, [isHovered, isDesktop, controls]);
+
   return (
     <div className={styles.wrapper} {...restProps}>
       {logoData.map((logo, idx) => {
@@ -45,11 +98,29 @@ export default function PaymentLogos({
           position.transform = positionData[idx].transform;
           position.position = 'absolute';
         }
-        return (
-          <div style={position}>
-            <img className={styles.logo} src={logo.src} alt={logo.name} />
-          </div>
-        );
+        if (idx < Math.round(logoData.length / 2)) {
+          return (
+            <motion.div
+              style={position}
+              initial='initial'
+              animate={controls}
+              variants={logoLeftVariants}
+            >
+              <img className={styles.logo} src={logo.src} alt={logo.name} />
+            </motion.div>
+          );
+        } else {
+          return (
+            <motion.div
+              style={position}
+              initial='initial'
+              animate={controls}
+              variants={logoRightVariants}
+            >
+              <img className={styles.logo} src={logo.src} alt={logo.name} />
+            </motion.div>
+          );
+        }
       })}
       {children}
     </div>

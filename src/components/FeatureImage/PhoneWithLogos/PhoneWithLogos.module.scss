@@ -1,11 +1,21 @@
+@use '../../../styles/base' as b;
+
 .wrapper {
+  width: 100%;
 }
 
 .foreground {
+  position: absolute;
   z-index: 100;
-  margin: auto;
+  left: 65px;
+  @media screen and (min-width: b.$breakpoint-desktop) {
+    top: -110px;
+  }
 }
 
 .image {
   width: 200px;
+  @media screen and (min-width: b.$breakpoint-desktop) {
+    width: 280px;
+  }
 }
