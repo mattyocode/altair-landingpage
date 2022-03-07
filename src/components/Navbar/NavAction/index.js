@@ -1,6 +1,6 @@
 import React from 'react';
 import { CgChevronDown } from 'react-icons/cg';
-import Underline from '../Underline';
+import Underline from '../../Underline';
 
 import styles from './NavAction.module.scss';
 

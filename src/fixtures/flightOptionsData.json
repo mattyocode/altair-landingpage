@@ -1,0 +1,17 @@
+[
+  {
+    "key": 1,
+    "label": "Return",
+    "value": "return"
+  },
+  {
+    "key": 2,
+    "label": "One way",
+    "value": "one"
+  },
+  {
+    "key": 3,
+    "label": "Multi-city",
+    "value": "multi"
+  }
+]

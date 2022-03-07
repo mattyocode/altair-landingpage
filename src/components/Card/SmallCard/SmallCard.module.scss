@@ -5,7 +5,6 @@
   @include m.flex-centered;
   flex-direction: column;
   background-color: b.$white;
-  // width: b.$content-width-mobile;
   border-radius: 15px;
   padding: 22px;
   height: 210px;
@@ -21,8 +20,20 @@
 .heading {
   font-size: 16px;
   font-weight: 400;
+
+  @media (min-width: b.$breakpoint-tablet) {
+    font-size: 20px;
+  }
 }
 
 .description {
   font-size: 14px;
+
+  @media (min-width: b.$breakpoint-tablet) {
+    font-size: 16px;
+  }
+
+  @media (min-width: b.$breakpoint-desktop) {
+    max-width: 250px;
+  }
 }

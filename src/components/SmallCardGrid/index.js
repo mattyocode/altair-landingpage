@@ -9,6 +9,7 @@ export default function SmallCardGrid({ blockContent }) {
       {blockContent.map((card) => {
         return (
           <SmallCard
+            key={card.id}
             iconSrc={card.iconSrc}
             heading={card.heading}
             description={card.description}

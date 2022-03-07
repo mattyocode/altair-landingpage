@@ -101,17 +101,24 @@ export default function PaymentLogos({
         if (idx < Math.round(logoData.length / 2)) {
           return (
             <motion.div
+              key={logo.id}
               style={position}
               initial='initial'
               animate={controls}
               variants={logoLeftVariants}
             >
-              <img className={styles.logo} src={logo.src} alt={logo.name} />
+              <img
+                data-testid='logo-icon'
+                className={styles.logo}
+                src={logo.src}
+                alt={logo.name}
+              />
             </motion.div>
           );
         } else {
           return (
             <motion.div
+              key={logo.id}
               style={position}
               initial='initial'
               animate={controls}

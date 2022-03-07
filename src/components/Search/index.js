@@ -1,68 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import RadioBtns from './RadioBtns';
 import SearchField from './SearchField';
-import CTABtn from './CTABtn';
+import CTABtn from '../CTABtn';
 import Toggle from './Toggle';
 
 import styles from './Search.module.scss';
 
-const flightOptions = [
-  {
-    key: 1,
-    label: 'Return',
-    value: 'return',
-  },
-  {
-    key: 2,
-    label: 'One way',
-    value: 'one',
-  },
-  {
-    key: 3,
-    label: 'Multi-city',
-    value: 'multi',
-  },
-];
+export default function Search({ fieldData, flightOptions }) {
+  const [flightType, setFlightType] = useState(null);
+  const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
+  // Ordinarily, all form values would be handled here
+  // (or in global state management like Redux)
+  // but omitting to focus on layout
 
-const testFieldData = [
-  {
-    key: 1,
-    header: 'Where from?',
-    defaultValue: 'London (LON)',
-    options: [],
-  },
-  {
-    key: 2,
-    header: 'Where to?',
-    defaultValue: 'Sydney (SYD)',
-    options: [],
-  },
-  {
-    key: 3,
-    header: 'Dates',
-    furtherDetail: '14 Nights',
-    defaultValue: 'Sat 11 Jan - Sat 25 Jun',
-    options: [],
-  },
-  {
-    key: 4,
-    header: 'Passengers',
-    defaultValue: '2 Adults, Any class',
-    options: [],
-  },
-];
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    console.log('Search form submitted!');
+  };
 
-export default function Search({ fieldData = testFieldData }) {
-  const [flightType, setFlightType] = useState(flightOptions[0].value);
+  useEffect(() => {
+    if (flightOptions) {
+      setFlightType(flightOptions[0].value);
+    }
+  }, [flightOptions]);
+
   return (
-    <form className={styles.wrapper}>
+    <form className={styles.wrapper} onSubmit={onSubmitHandler}>
       <div className={styles.topRow}>
         <RadioBtns
           optionsData={flightOptions}
           selected={flightType}
           setSelected={setFlightType}
         />
-        <Toggle label='Direct flights only' />
+        <Toggle
+          label='Direct flights only'
+          selected={directFlightsOnly}
+          setSelected={setDirectFlightsOnly}
+        />
       </div>
       <div className={styles.choiceGroup}>
         <div className={styles.choiceFields}>
@@ -72,7 +46,7 @@ export default function Search({ fieldData = testFieldData }) {
               value={fieldData[0].defaultValue}
               furtherDetail={fieldData[0].furtherDetail}
             />
-            <div className={styles.swap}></div>
+            <div className={styles.swapBtn}></div>
             <SearchField
               fieldName={fieldData[1].header}
               value={fieldData[1].defaultValue}

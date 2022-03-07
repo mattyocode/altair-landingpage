@@ -6,17 +6,7 @@ import affirm from '../assets/images/logos/affirm.png';
 import laybuy from '../assets/images/logos/laybuy.png';
 import check from '../assets/icons/check.svg';
 
-const largePromo1 = {
-  heading: 'Buy now, pay later',
-  description:
-    'Book your flights today and spread the cost over time with one of our instalment options.',
-  ctaLabel: 'Browse payment methods',
-  bulletList: [
-    'Make payments weekly or monthly',
-    'Interest free options',
-    'Fast approval',
-  ],
-};
+import promoData from '../fixtures/promo1Data.json';
 
 const logos = [
   {
@@ -66,19 +56,27 @@ const logoPositions = [
 
 const mobileContent = <PaymentLogos logoData={logos} />;
 
-const largeContent = (
+const largerContent = (
   <PhoneWithLogos logoData={logos} positionData={logoPositions} />
 );
 
-export default function PromoContainer() {
+export default function PromoBlock({
+  heading = promoData.heading,
+  description = promoData.description,
+  ctaLabel = promoData.ctaLabel,
+  bulletIcon = check,
+  bulletList = promoData.bulletList,
+  smallContent = mobileContent,
+  largeContent = largerContent,
+}) {
   return (
     <LargePromo
-      heading={largePromo1.heading}
-      description={largePromo1.description}
-      ctaLabel={largePromo1.ctaLabel}
-      bulletIcon={check}
-      bulletList={largePromo1.bulletList}
-      smallContent={mobileContent}
+      heading={heading}
+      description={description}
+      ctaLabel={ctaLabel}
+      bulletIcon={bulletIcon}
+      bulletList={bulletList}
+      smallContent={smallContent}
       largeContent={largeContent}
     />
   );

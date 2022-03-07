@@ -13,7 +13,7 @@ export default function RadioBtns({
   };
 
   return (
-    <ul className={styles.options}>
+    <ul className={styles.options} {...restProps}>
       {optionsData.map((option) => {
         return (
           <li key={option.key} className={styles.option}>

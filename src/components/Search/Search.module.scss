@@ -29,16 +29,6 @@
   }
 }
 
-.choiceFields {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-
-  @media (min-width: b.$breakpoint-desktop) {
-    flex-wrap: nowrap;
-  }
-}
-
 .choiceGroup {
   width: 100%;
   @media (min-width: b.$breakpoint-desktop) {
@@ -53,6 +43,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+.choiceFields {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: b.$breakpoint-desktop) {
+    flex-wrap: nowrap;
   }
 }
 
@@ -81,12 +81,12 @@
   justify-content: space-evenly;
 }
 
-.swap {
+.swapBtn {
   @media (min-width: b.$breakpoint-tablet) {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 7px;
+    margin-top: 10px;
 
     &:after {
       content: ' ';
@@ -101,6 +101,7 @@
       background-color: b.$white;
       border: 1px solid b.$outlineGrey;
       z-index: 1000;
+      cursor: pointer;
     }
   }
 }

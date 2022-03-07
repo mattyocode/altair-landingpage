@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NavAction from '../NavAction';
+import NavAction from './NavAction';
 import logo from '../../assets/images/logos/alternative-airlines.jpg';
 import burger from '../../assets/icons/menu.svg';
 import useWindowSize from '../../hooks/use-window-size';
@@ -33,7 +33,7 @@ export default function Navbar({ navData = [], ...restProps }) {
               {navData.map((item, idx) => {
                 if (idx < navData.length - 1) {
                   return (
-                    <li className={styles.navItem}>
+                    <li className={styles.navItem} key={`nav-${idx}`}>
                       <NavAction itemData={item} />
                     </li>
                   );
@@ -43,7 +43,7 @@ export default function Navbar({ navData = [], ...restProps }) {
               })}
             </ul>
             <ul className={styles.linkWrapper}>
-              <li className={styles.navItem}>
+              <li className={styles.navItem} key={`nav-${navData.length - 1}`}>
                 <NavAction itemData={navData.at(-1)} />
               </li>
             </ul>

@@ -1,0 +1,27 @@
+[
+  {
+    "key": 1,
+    "header": "Where from?",
+    "defaultValue": "London (LON)",
+    "options": []
+  },
+  {
+    "key": 2,
+    "header": "Where to?",
+    "defaultValue": "Sydney (SYD)",
+    "options": []
+  },
+  {
+    "key": 3,
+    "header": "Dates",
+    "furtherDetail": "14 Nights",
+    "defaultValue": "Sat 11 Jan - Sat 25 Jun",
+    "options": []
+  },
+  {
+    "key": 4,
+    "header": "Passengers",
+    "defaultValue": "2 Adults, Any class",
+    "options": []
+  }
+]

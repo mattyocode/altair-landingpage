@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from 'react';
-import CTABtn from '../../Search/CTABtn';
+import CTABtn from '../../CTABtn';
 import useWindowSize from '../../../hooks/use-window-size';
 import * as BREAKPOINTS from '../../../constants/breakpoints';
 
@@ -42,9 +42,12 @@ export default function LargePromo({
           <p className={styles.description}>{description}</p>
           {bulletList && !smallScreen && (
             <ul className={styles.bulletList}>
-              {bulletList.map((item) => {
+              {bulletList.map((item, idx) => {
                 return (
-                  <li className={styles.bulletItem}>
+                  <li
+                    className={styles.bulletItem}
+                    key={`promoBulletList-${idx}`}
+                  >
                     {bulletIcon ? (
                       <img
                         className={styles.bulletIcon}
