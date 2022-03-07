@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/altair-landingpage/static/css/main.542f7a69.css",
+    "main.css": "/altair-landingpage/static/css/main.2233961f.css",
     "main.js": "/altair-landingpage/static/js/main.3978438b.js",
     "static/js/787.c9bb958d.chunk.js": "/altair-landingpage/static/js/787.c9bb958d.chunk.js",
     "static/media/background-image.jpg": "/altair-landingpage/static/media/background-image.06e535a7306eb94b5f99.jpg",
@@ -15,12 +15,12 @@
     "index.html": "/altair-landingpage/index.html",
     "static/media/check.svg": "/altair-landingpage/static/media/check.84fce51077003ed6cc1d4c25ec92b4a8.svg",
     "static/media/choice.svg": "/altair-landingpage/static/media/choice.f2282856275dbbf99f2723c9cb9a0ea3.svg",
-    "main.542f7a69.css.map": "/altair-landingpage/static/css/main.542f7a69.css.map",
+    "main.2233961f.css.map": "/altair-landingpage/static/css/main.2233961f.css.map",
     "main.3978438b.js.map": "/altair-landingpage/static/js/main.3978438b.js.map",
     "787.c9bb958d.chunk.js.map": "/altair-landingpage/static/js/787.c9bb958d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.542f7a69.css",
+    "static/css/main.2233961f.css",
     "static/js/main.3978438b.js"
   ]
 }
